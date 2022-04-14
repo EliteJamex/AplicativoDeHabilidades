@@ -1,0 +1,68 @@
+body
+{
+    background-image: url(../Imagenes/ImagenLogin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x:scroll;
+    overflow-y:hidden;
+}
+
+.ContenedorCentral
+{
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+}
+.ContenedorCentral .ContenedorIndex
+{
+    margin: 20px;
+    width: 90%;
+    border-radius: 30px;
+    background-color: E2E2E2;
+}
+.ContenedorCentral .ContenedorIndex .ContenedorLogoOperacion
+{
+    margin-top: -75px;
+    margin-bottom: 35px;
+    width: 150px;
+    height: 150px;
+}
+.ContenedorCentral .ContenedorIndex .ContenedorLogoOperacion img
+{
+    width: 90%;
+    height: 90%;
+    border-radius: 25px;
+    border-style:groove;
+    border-width: 4px;
+}
+
+.ContenedorCentral .ContenedorIndex .ContenedorLogoUni
+{
+    margin-top: -75px;
+    margin-bottom: 35px;
+    margin-left: 15px;
+    width: 200px;
+    height: 200px;
+}
+
+
+.ContenedorCentral .ContenedorIndex .ContenedorLogoUni img
+{
+    width: 90%;
+    height: 90%;
+    border-radius: 25px;
+    border-style:groove;
+    border-width: 4px;
+}
+
+.ContenedorCentral .ContenedorIndex .InformacionFuncionalidad
+{
+    margin: 40px;
+}
+.ContenedorCentral .ContenedorContenido
+{
+    width: 97%;
+    margin: 20px;
+}
+

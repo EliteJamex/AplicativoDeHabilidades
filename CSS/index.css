@@ -1,0 +1,9 @@
+.ContenedorPrincipal
+{
+    width: 100%;
+}
+.ContenedorPrincipal iframe
+{
+    width: 100%;
+    height: 1000px;
+}
