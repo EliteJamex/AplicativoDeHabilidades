@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/test.css" />
+    <title>Test</title>
+  </head>
+  <body>
+    <main>
+      <section id="main">
+        <div class="text">
+          <p>
+            Una empresa de quiere desarrollar un software de contabilidad, para
+            lo cuál contratan la compañia DDS "Desarrollo de software". Pero la
+            empresa requiere que les muestren las diferentes fases del
+            desarrollo. Cuál de las siguientes fases es la correcta.
+          </p>
+        </div>
+        <div class="form">
+          <form>
+            <div class="input">
+              <input type="radio" id="A" name="Answer" value="A" /><span>
+                <label for="A"
+                  >Analisis de requisitos, diseño y arquitectura, programación,
+                  pruebas, documentación mantenimiento</label
+                ><br />
+              </span>
+            </div>
+            <div class="input">
+              <input type="radio" id="B" name="Answer" value="B" /><span>
+                <label for="B"
+                  >Código limpio, arquitectura de software, testing, patrones de
+                  diseño</label
+                ><br />
+              </span>
+            </div>
+            <div class="input">
+              <input type="radio" id="C" name="Answer" value="C" /><span>
+                <label for="C"
+                  >Reducción de ataque, criterio de menor privilegio, falla de
+                  manera segura, análisis de riesgos.</label
+                ><br />
+              </span>
+            </div>
+            <div class="input">
+              <input type="radio" id="D" name="Answer" value="D" /><span>
+                <label for="D"
+                  >Testeo con un cliente, testeo de mutación de datos, revision
+                  de código</label
+                >
+              </span>
+            </div>
+          </form>
+        </div>
+        <div class="btn">
+          <button onclick="validate()" id="validate">Validar</button>
+          <h3 id="correct" style="color: green"></h3>
+          <h4 id="incorrect" style="color: red"></h4>
+        </div>
+        <div class="btns">
+          <button class="btn">Guardar</button>
+          <button class="btn">Volver</button>
+          <button class="btn">Salir</button>
+        </div>
+      </section>
+    </main>
+    <script src="./Javascript/test.js"></script>
+  </body>
+</html>

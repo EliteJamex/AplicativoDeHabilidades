@@ -4,8 +4,6 @@ body
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    overflow-x:scroll;
-    overflow-y:hidden;
 }
 
 .DivPadre
@@ -39,11 +37,4 @@ body
     border: solid 0.5px black;
     width: 95%;
     margin-bottom: 6px;
-}
-
-button:hover
-{
-    border: solid 4px green;
-    background-color:rgb(114, 168, 32);
-    color: brown;
 }

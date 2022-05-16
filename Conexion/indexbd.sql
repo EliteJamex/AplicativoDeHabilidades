@@ -48,8 +48,16 @@ REFERENCES usuario(id_usu);
 INSERT INTO usuario (tipo_docu, documen_usu, nom_usu,ape_usu,tele_usu,email_usu)
 VALUES ('CC',1001203380,'Kenner','Ruiz',3208343970,'asddsa@sdaf.com');
 
+INSERT INTO usuario (tipo_docu, documen_usu, nom_usu,ape_usu,tele_usu,email_usu)
+VALUES ('CC',123,'Jose','Manuel',3208343970,'aasdfasdf@sadf.com');
+
+-- Materias de prueba
 INSERT into materias(nom_materias,cant_estudiantes_materia)VALUES('Matematicas','39');
 
+
+--Preguntas de prueba
 INSERT INTO pregunta_materia(Pregunta_materia,id_usu,id_materia)VALUES('Hola que hacen',1,1);
 
+
+--Respuestas de prueba
 INSERT into respuesta_pregunta_materia(Respuesta_Pregunta,id_pregunta,id_usu)VALUES('Bien y tu',1,1);

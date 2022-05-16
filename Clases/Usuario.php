@@ -1,5 +1,5 @@
 <?php
-    include("Conexion/conexion.php");
+    include_once("../Conexion/conexion.php");
     class Usuario
     {
         private $id_usu;
@@ -20,8 +20,11 @@
             $this->tele_usu = $tele_usu;
             $this->email_usu = $email_usu;
         }
-        public static function a()
+
+        public function ConsultarUsuario($id_usu)
         {
-            
+            $respuesta = EjecucionQuery("SELECT * FROM usuario where id_usu = $id_usu");
+            return $respuesta;
         }
+    }
 ?>

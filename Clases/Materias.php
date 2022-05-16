@@ -1,5 +1,5 @@
 <?php
-include_once("Conexion/conexion.php");
+include_once("../Conexion/conexion.php");
     class MateriaS
     {
         private $id_materias;

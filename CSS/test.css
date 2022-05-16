@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../Imagenes/test.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#main {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 200 auto;
+  background-color: white;
+  width: 600px;
+  height: 500px;
+  padding: 0 60px;
+}
+
+.text {
+  margin: 40px auto;
+  font-size: larger;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 45px;
+}
+.btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  cursor: pointer;
+  color: #ffff;
+  border-radius: 10px;
+  outline: 0;
+  padding: 5px 10px;
+  background-color: rgb(7, 41, 41);
+}
