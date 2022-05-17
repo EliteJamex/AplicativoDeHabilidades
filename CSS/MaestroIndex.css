@@ -6,6 +6,39 @@ body
     background-attachment: fixed;
 }
 
+p {
+    color: white;
+}
+
+h1 {
+    color: #202945;
+}
+
+.footer {
+    background-color: #202945;
+    padding: 10px;
+}
+
+.footer p {
+    color: white
+}
+
+.Buttons {
+    background-color: white;
+    border: none;
+    padding: 10px;
+}
+
+.Inputs {
+    border: none;
+    background-color: gray;
+    color: white;
+}
+
+.Buttons:hover {
+    background-color: #00acc9;
+}
+
 .ContenedorCentral
 {
     margin-top: 100px;
@@ -14,16 +47,15 @@ body
 .ContenedorCentral .ContenedorIndex
 {
     width: 90%;
-    border-radius: 30px;
+    border-radius: 15px;
     background-color: #E2E2E2;
 }
 .ContenedorCentral .ContenedorIndex .ContenedorLogoOperacion img
 {
     width: 90%;
     height: 90%;
-    border-radius: 25px;
-    border-style:groove;
-    border-width: 4px;
+    border-radius: 20px;
+    border: 2px solid;
 }
 
 .ContenedorCentral .ContenedorIndex .ContenedorLogoUni
@@ -40,9 +72,8 @@ body
 {
     width: 90%;
     height: 90%;
-    border-radius: 25px;
-    border-style:groove;
-    border-width: 4px;
+    border-radius: 20px;
+    border: 2px solid;
 }
 .ContenedorContenido{
     align-items: center;
@@ -56,3 +87,4 @@ body
 .ContenedorContenido button img{
     width: 100%;
 }
+

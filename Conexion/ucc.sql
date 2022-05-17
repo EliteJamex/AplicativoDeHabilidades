@@ -1,9 +1,28 @@
--- Base de datos: `desarrollo`
+-- phpMyAdmin SQL Dump
+-- version 5.1.3
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 19-04-2022 a las 21:07:42
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 7.4.28
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `ucc`
 
 	CREATE DATABASE desarrollo;
 --
-USE desarrollo;
---
+
 -- --------------------------------------------------------
 
 --
@@ -42,22 +61,6 @@ CREATE TABLE `semestre` (
   `descripcion` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE materias(
-    id_materias int AUTO_INCREMENT UNIQUE,
-    nom_materias varchar(20) NULL,
-    cant_estudiantes_materia int NULL,
-    PRIMARY KEY(id_materias)
-);
-CREATE TABLE pregunta_materia(
-    id_pregunta int AUTO_INCREMENT UNIQUE,
-    Pregunta_materia varchar(200) NULL,
-    PRIMARY KEY(id_pregunta)
-);
-CREATE TABLE respuesta_pregunta_materia(
-    id_respuesta int AUTO_INCREMENT UNIQUE,
-    Respuesta_Pregunta varchar(200) NULL,
-    PRIMARY KEY(id_respuesta)
-);
 --
 -- Índices para tablas volcadas
 --
@@ -85,23 +88,9 @@ REFERENCES `documento`(id_tipo);
 
 ALTER TABLE `registro` ADD CONSTRAINT fk_registrosemestre FOREIGN KEY(id_semestre) 
 REFERENCES `semestre`(id_semestre);
-
-ALTER TABLE pregunta_materia ADD id_materias int NOT NULL;
-ALTER TABLE pregunta_materia ADD CONSTRAINT fk_MateriaPregun FOREIGN KEY(id_materias) 
-REFERENCES materias(id_materias);
-
-ALTER TABLE respuesta_pregunta_materia ADD id_pregunta int NOT NULL;
-ALTER TABLE respuesta_pregunta_materia ADD CONSTRAINT fk_PregunRespue FOREIGN KEY(id_pregunta) 
-REFERENCES pregunta_materia(id_pregunta);
-
-ALTER TABLE pregunta_materia ADD numero varchar(20) NOT NULL;
-ALTER TABLE pregunta_materia ADD CONSTRAINT fk_usuariopregunta FOREIGN KEY(numero) 
-REFERENCES `registro`(numero);
-
-ALTER TABLE respuesta_pregunta_materia ADD numero varchar(20) NOT NULL;
-ALTER TABLE respuesta_pregunta_materia ADD CONSTRAINT fk_usuariorespuesta FOREIGN KEY(numero) 
-REFERENCES `registro`(numero);
-
+  --
+-- Volcado de datos para la tabla `documento`
+--
 
 INSERT INTO `documento` (`id_tipo`, `descripcion`) VALUES
 (1, 'Cedula'),
@@ -131,3 +120,8 @@ INSERT INTO `semestre` (`id_semestre`, `descripcion`) VALUES
 (8, 'Octavo'),
 (9, 'Noveno'),
 (10, 'Decimo');
+
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

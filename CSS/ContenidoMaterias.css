@@ -1,17 +1,18 @@
-body{
-    color:rgb(36, 38, 37);
+body {
+    color: rgb(36, 38, 37);
     padding: 0;
     margin: 0;
 }
-a{
-    color:rgb(36, 38, 37);
+
+a {
+    color: rgb(36, 38, 37);
 }
 
-.MenuContenido{
+.MenuContenido {
     margin: 10px;
 }
-.MenuContenido ul
-{
+
+.MenuContenido ul {
     width: 100%;
     padding: 0px 2px;
     align-items: center;
@@ -21,7 +22,7 @@ a{
     text-align: center;
     margin-left: 3px;
     margin-right: 3px;
-    list-style-type:none;
+    list-style-type: none;
     width: 100%;
     height: 30px;
 }
@@ -50,82 +51,85 @@ a{
 .MenuContenido a:hover {
     background-color: #dedbcc;
     color: #9dba10;
-  font-weight: bolder;
-  font-size: 20px;
+    font-weight: bolder;
+    font-size: 20px;
 }
 
 /* Comentarios */
-.NomUsuario{
-    margin:0;
+.NomUsuario {
+    margin: 0;
     font-size: 13px;
     padding-left: 10px;
     font-weight: normal;
-  }
-  .Comentario{
-    margin:0;
+}
+
+.Comentario {
+    margin: 0;
     font-size: 18px;
     padding-left: 10px;
     padding-bottom: 10px;
     font-weight: normal;
-  }
+}
+
 /* Abridor de Formulario */
-.LinkVentana
-{
+.LinkVentana {
     border: none;
     width: 98%;
     padding: 10px;
     margin: 10px;
 }
-.LinkVentana a{
+
+.LinkVentana a {
     text-decoration: none;
 }
 
 /* Botones */
-.Botones{
+.Botones {
     border: none;
     width: 98%;
     background-color: #E2E2E2;
 }
-.Botones a{
+
+.Botones a {
     background-color: #E2E2E2;
 }
+
 /* Acordeones */
-div.acordeon
-{
-  margin: 10px;
-  width: 98%;
-  padding: 0;
-  font-size: 20px;
+div.acordeon {
+    margin: 10px;
+    width: 98%;
+    padding: 0;
+    font-size: 20px;
 }
-.acordeon
-{
+
+.acordeon {
     width: 100%;
-  /* background-color: #f1f1f1; */
-	/* margin: auto; */	
-	box-shadow: 7px 13px 37px rgba(0, 0, 0, .5);
+    /* background-color: #f1f1f1; */
+    /* margin: auto; */
+    box-shadow: 7px 13px 37px rgba(0, 0, 0, .5);
 }
 
-.acordeon input{
-  width: 98%;
-  padding: 10px;
-  border: none;
+.acordeon input {
+    width: 98%;
+    padding: 10px;
+    border: none;
 }
 
-.acordeon input::placeholder{
-  text-align: center;
-  font-size: 15px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.acordeon input::placeholder {
+    text-align: center;
+    font-size: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.acordeon section p
-{
-    margin:0;
+
+.acordeon section p {
+    margin: 0;
     overflow: hidden;
     max-height: 0;
     background: #e4e4e4;
     transition: all 0.3s ease-in;
 }
-.acordeon section a
-{
+
+.acordeon section a {
     width: 100%;
     text-decoration: none;
     display: block;
@@ -133,14 +137,16 @@ div.acordeon
     padding: 10px;
     background-color: #9dba10;
 }
+
 .acordeon section:target p {
     width: 100%;
     max-height: 1000px;
     padding: 10px;
     transition: all 0.1s ease-in;
 }
+
 /* Diseños Ventana */
-.ventana{
+.ventana {
     width: 100%;
     height: 100%;
     color: white;
@@ -151,7 +157,7 @@ div.acordeon
     display: none;
 }
 
-.form{
+.form {
     width: 300px;
     height: 300px;
     padding: 25px;
@@ -163,7 +169,8 @@ div.acordeon
     background-color: white;
     color: black;
 }
-.cerrar{
+
+.cerrar {
     color: red;
     text-align: left;
 }
