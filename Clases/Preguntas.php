@@ -4,13 +4,13 @@ include_once("../Conexion/conexionK.php");
     {
         private $id_pregunta;
         private $Pregunta_materia;
-        private $id_usu;
+        private $numero;
         private $id_materias;
-        public function __construct($id_pregunta,$Pregunta_materia,$id_usu,$id_materias)
+        public function __construct($id_pregunta,$Pregunta_materia,$numero,$id_materias)
         {
             $this->id_pregunta = $id_pregunta;
             $this->Pregunta_materia = $Pregunta_materia;
-            $this->id_usu = $id_usu;
+            $this->numero = $numero;
             $this->id_materias = $id_materias;
         }
         public static function SelectPreguntas($id_materias)

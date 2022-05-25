@@ -62,6 +62,7 @@
                         <button class="LinkVentana" onclick="AbrirVentana();">Crear pregunta</button>
                         <div>
                             <div class="acordeon">
+                                <form method="POST" action="materia.php"></form>
                                 <?php
                                 if (isset($_POST)) {
                                     $Preguntas = new Preguntas(0, '', 0, 0);
@@ -71,7 +72,7 @@
                                         while ($filapreg = mysqli_fetch_array($TotalPreguntas)) {
                                             $idpregunta = $filapreg["id_pregunta"];
                                             $pregunta = $filapreg["Pregunta_materia"];
-                                            $idUsuario = $filapreg["id_usu"];
+                                            $idUsuario = $filapreg["numero"];
                                 ?>
                                             <section id="<?php echo $idpregunta; ?>">
                                                 <a href="#<?php echo $idpregunta; ?>"><?php echo $pregunta; ?></a>
@@ -84,18 +85,18 @@
                                                     <b>Comentarios</b>
                                                     <br>
                                                     <?php
-                                                    $Respuestas = new Respuestas(0, '', 0);
-                                                    $TotalRespuestas = $Respuestas::ConsultarRespuesta($idpregunta);
+                                                    $RespuestasN = new Respuestas(0,0,'',0);
+                                                    $TotalRespuestas = $RespuestasN::ConsultarRespuesta($idpregunta);
                                                     if ($TotalRespuestas) {
                                                         while ($filarespu = mysqli_fetch_array($TotalRespuestas)) {
                                                             $idrespues = $filarespu["id_respuesta"];
                                                             $respues = $filarespu["Respuesta_Pregunta"];
-                                                            $id_usurespuesta = $filarespu["id_usu"];
+                                                            $id_usurespuesta = $filarespu["numero"];
 
-                                                            $ObtenerNombre = $Respuestas::ConsultarUsuarioPorIdRespuesta($id_usurespuesta);
+                                                            $ObtenerNombre = $RespuestasN::ConsultarUsuarioPorIdRespuesta($idrespues);
                                                             if ($ObtenerNombre) {
                                                                 while ($filasusuario = mysqli_fetch_array($ObtenerNombre)) {
-                                                                    $NombreUsuario = $filasusuario["Usuario"];
+                                                                    $NombreUsuario = $filasusuario["registro"];
 
                                                     ?>
                                                                     <b class="NomUsuario"><?php echo $NombreUsuario; ?></b>
