@@ -61,7 +61,7 @@
                         <button class="LinkVentana" onclick="AbrirVentana();">Crear pregunta</button>
                         <div>
                             <div class="acordeon">
-                                <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
+                                <form action="InsertarDatos.php" method="POST">
                                     <?php
                                     if (isset($_POST)) {
                                         $Preguntas = new Preguntas(0, '', '', 0);
@@ -76,12 +76,6 @@
                                                 <section id="<?php echo $idpregunta; ?>">
                                                     <a href="#<?php echo $idpregunta; ?>"><?php echo $pregunta; ?></a>
                                                     <div>
-                                                        <p>
-                                                            Ingresa un comentario:
-                                                            <input type="text" name="IdComentario" id="P<?php echo $idpregunta; ?>" placeholder="Ingrese un comentario">
-                                                            <a class="Botones" name="InsertarM" href="?idpregunta=<?php echo $idpregunta; ?>&idusu=<?php $idUsu = 1997896452;
-                                                                                                                                                                                                                    echo $idUsu; ?>">Aceptar</a>
-                                                        </p>
                                                         <p>
                                                             <b>Comentarios</b>
                                                             <br>
@@ -127,14 +121,6 @@
             </div>
         </div>
     </div>
-    <?php
-    if (isset($_POST['InsertarM'])) {
-        $idpregunta = $_REQUEST['idpregunta'];
-        $idusu = $_REQUEST['idusu'];
-        $Comentario = $_GET['IdComentario'];
-    }
-
-    ?>
     <h1>Datos: <?php echo $idpregunta;
                 echo $idusu;
                 echo $Comentario; ?></h1>
@@ -143,8 +129,40 @@
     <div class="ventana">
         <div class="form">
             <div class="cerrar"> <a href="javascript:CerrarVentana()">Cerrar X</a></div>
-            <h1>Formulario</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, cumque! Esse, perferendis labore! Ratione molestias eaque quasi vitae ipsa, voluptatem quibusdam? Aperiam deleniti provident eos delectus soluta eaque aspernatur ab.</p>
+            <form action="InsertarDatos.php" method="POST">
+                <h1>Seleccione la materia: </h1>
+                <select name="SeleccionMat">
+                    <?php
+                        $ObjMaterias = new MateriaS(0,'',0);
+                        $TotalMaterias = $ObjMaterias::SelecMaterias();
+                        if($TotalMaterias)
+                        {
+                            while ($filamat = mysqli_fetch_array($TotalMaterias)) {
+                                $idpregunta = $filamat["id_materias"];
+                                $pregunta = $filamat["Pregunta_materia"];
+                                $idUsuario = $filamat["numero"];
+    
+                                echo '<option value="'.$pregunta.'">'.$pregunta.'</option>';
+                            }
+                        }
+                    ?>
+                </select>
+                <h1>Seleccione una pregunta: </h1>
+                <select name="SeleccionPre">
+                <?php
+                    if($TotalPreguntas)
+                    {
+                        while ($filapreg = mysqli_fetch_array($TotalPreguntas)) {
+                            $idpregunta = $filapreg["id_pregunta"];
+                            $pregunta = $filapreg["Pregunta_materia"];
+                            $idUsuario = $filapreg["numero"];
+
+                            echo '<option value="'.$pregunta.'">'.$pregunta.'</option>';
+                        }
+                    }
+                ?>
+                </select>
+            </form>
         </div>
     </div>
     <div class="footer fixed-bottom d-flex justify-content-center">

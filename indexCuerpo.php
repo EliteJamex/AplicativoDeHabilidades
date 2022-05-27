@@ -30,8 +30,9 @@
                                 Tecnicas de estudio
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                            <li><a class="dropdown-item" id="Materias">Preguntas y Respuestas</a></li>
+                                <li><a class="dropdown-item" id="Materias">Preguntas y Respuestas</a></li>
                                 <li><a class="dropdown-item" id="fichasestudio">Fichas de estudio</a></li>
+                                <li><a class="dropdown-item" id="tutoria">Tutorias</a></li>
                                 <li><a class="dropdown-item" id="subrayado">Subrayado</a></li>
                                 <li><a class="dropdown-item" id="Test">Test</a></li>
                             </ul>

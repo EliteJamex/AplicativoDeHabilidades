@@ -18,5 +18,10 @@ include_once("../Conexion/conexionK.php");
             $respuesta = EjecucionQuery("SELECT * FROM pregunta_materia where id_materias = $id_materias");
             return $respuesta;
         }
+        public static function SelectTodasPreguntas()
+        {
+            $respuesta = EjecucionQuery("SELECT * FROM pregunta_materia");
+            return $respuesta;
+        }
     }
 ?>

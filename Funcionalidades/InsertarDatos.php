@@ -6,7 +6,7 @@
     <?php
         $idpregunta = $_REQUEST['idpregunta'];
         $idusu = $_REQUEST['idusu'];
-        $Comentario = $_POST['IdComentario'];
+        $Comentario = $_POST['P'.$idpregunta];
 
     ?>
         <h1>Datos: <?php echo $idpregunta;
